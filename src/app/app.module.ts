@@ -10,6 +10,7 @@ import { CarrinhoService } from './carrinho.service';
 import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSnackBarModule 
+    MatSnackBarModule , 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

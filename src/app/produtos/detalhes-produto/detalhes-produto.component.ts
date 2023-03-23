@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CarrinhoService } from 'src/app/carrinho.service';
 import { NotificacaoService } from 'src/app/notificacao.service';
 import { ProdutoServiceService } from 'src/app/produto-service.service';
@@ -16,11 +16,13 @@ export class DetalhesProdutoComponent  implements OnInit{
 
   quantidade = 1;
 
+
   constructor (
 private produtosService: ProdutoServiceService,
 private route : ActivatedRoute,
 private notificacaoService : NotificacaoService,
-private carrinhoService : CarrinhoService
+private carrinhoService : CarrinhoService,
+private routes: Router
 
   ){}
 
@@ -41,4 +43,7 @@ private carrinhoService : CarrinhoService
     this.carrinhoService.adicionarAoCarrinho(produto);
 
   }
+
+
+
 }

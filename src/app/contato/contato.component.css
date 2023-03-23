@@ -16,6 +16,11 @@
 
 }
 
+.contact-form input {
+
+    size: 40px;
+}
+
 .contact-form button {
     align-self: flex-end;
     background-color: blue;
@@ -49,3 +54,26 @@
 
     text-align: center;
 }
+
+
+
+input[type=text] {
+    height: 50px;
+    }
+
+input[type=assunto] {
+    height: 50px;
+    }
+    
+input[type=tel] {
+    height: 50px;
+    }
+        
+input[type=email] {
+    height: 50px;
+    }
+
+    
+textarea {
+    height: 200px;
+    }

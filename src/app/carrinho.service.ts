@@ -1,4 +1,3 @@
-import { isNgTemplate } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { IProdutoCarrinho, produtos } from './produtos';
 
@@ -27,7 +26,7 @@ export class CarrinhoService {
   limparCarrinho (){
 
     this.itens = [];
-    localStorage.clear;
+    localStorage.clear();
   }
 
   removerProdutoCarrinho (produtoID : number){

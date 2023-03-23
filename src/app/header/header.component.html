@@ -1,7 +1,14 @@
 <header class="main-header">
-    <h1 class="main-header__title">
-        <span class="main-header__title--blue">Robson</span><span class="main-header__title--orange">Conceicao</span>
-    </h1>
+   
+    <a class="nome__principal" routerLink="produtos">
+        <h1 class="main-header__title">
+            <span class="main-header__title--blue">
+                Robson</span><span class="main-header__title--orange">Conceicao</span>
+        </h1>
+    
+
+    </a>
+
 
     <div class="container-menu">
     <nav class="main-header__menu">
@@ -13,19 +20,19 @@
                 <span class="badge-carrinho"> {{servicoCarrinho.ObtemCarrinho().length}}</span>
             </a>
             </li>
-            <li><a href="">Contato</a></li>
-            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="" routerLink="contato">Contato</a></li>
+            <li class="redes__sociais"><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="redes__sociais"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li class="redes__sociais"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            <li class="redes__sociais"><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
         </ul>
 
     </nav>
 
-    <form action="" class="search-form">
-        <input type="text" class="search-form input">
-        <button class="search-form button">        <i class="fa-solid fa-magnifying-glass"></i>   </button>
-    </form>
+    <form class="search-form" (ngSubmit)="pesquisar()">
+        <input type="text" name="descricao" [(ngModel)]="descricao">
+        <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+      </form>
 
 </div>
 </header>
