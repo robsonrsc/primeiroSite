@@ -6,16 +6,18 @@ import { IProduto, produtos } from './produtos';
 })
 export class ProdutoServiceService {
 
-  produtos1: IProduto[] = produtos;
+  produtos: IProduto[] = produtos;
 
   constructor() { }
 
-  getAll (){
-    return this.produtos1;
+  getAll(){
+    return this.produtos;
+
   }
 
-  getOne (produtoID: number) {
+  getOne (produtoId: number) {
 
-    return this.produtos1.find(produto =>produto.id = produtoID);
+
+    return this.produtos.find(produto =>produto.id === produtoId);
   }
 }

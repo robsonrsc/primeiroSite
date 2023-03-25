@@ -1,12 +1,11 @@
-import { Component, NgModule } from '@angular/core';
+import { DetalhesProdutosComponent } from './detalhes-produto/detalhes-produto.component';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.component';
 import { ProdutosComponent } from './produtos.component';
 
 const routes: Routes = [
   { path: '', component: ProdutosComponent },
-
-  {path: ':id' , component: DetalhesProdutoComponent}
+  { path:':id', component:DetalhesProdutosComponent}
 ];
 
 @NgModule({
@@ -14,3 +13,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class ProdutosRoutingModule { }
+
+
+
